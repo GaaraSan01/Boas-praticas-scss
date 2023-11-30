@@ -1,0 +1,74 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins.scss';
+
+
+header {
+    background: variaveis.$gradiente-primario;
+    padding: 2rem;
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
+        .linha {
+            border: 1px solid black;
+            width: 80%;
+        }
+        ul {
+            display: flex;
+            gap: 2rem;
+        }
+        li {
+            list-style-type: none;
+        }
+        a {
+            text-decoration: none;
+            @include mixins.ff-fs-cl(variaveis.$font-primaria, 1rem, variaveis.$cor-primaria);
+            font-weight: 500;
+            &:hover{
+                color: variaveis.$cor-secundaria;
+            }
+        }
+    }
+    #home {
+        max-width: 1040px;
+        @include mixins.margem-central(80%);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .textos-home{
+            max-width: 474px;
+            h1{
+                font-size: 42px;
+                color: variaveis.$cor-primaria;
+                font-family: variaveis.$font-secundaria;
+                span{
+                    color: variaveis.$cor-secundaria;
+                }
+            }
+            .btn-main {
+                margin-top: 32px;
+                padding: 24px;
+                background: variaveis.$cor-secundaria;
+                border-radius: 40px;
+                color: white;
+                font-family: variaveis.$font-primaria;
+                font-weight: 600;
+                font-size: 22px;
+                border: none;
+                transition: .3s;
+                cursor: pointer;
+                &:hover {
+                    background: variaveis.$cor-primaria;
+                }
+            }
+        }
+        .img-home {
+            max-width: 474px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

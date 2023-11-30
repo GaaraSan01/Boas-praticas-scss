@@ -1,0 +1,11 @@
+@use '../abstract/mixins.scss';
+@use '../abstract/variaveis';
+
+
+footer {
+    @include mixins.ff-fs-cl(variaveis.$font-primaria, 1rem, variaveis.$cor-terciaria);
+    padding: 2rem 0;
+    background: variaveis.$cor-primaria;
+    padding-left:20%;
+    margin-top: 2rem;
+}
